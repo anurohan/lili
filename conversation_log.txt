@@ -1,0 +1,433 @@
+[2026-02-06 01:55:06] USER: hello
+[2026-02-06 01:55:06] LILI: Namaste! Hello! How can I assist you today? 😊
+------------------------------------------------------------
+
+[2026-02-06 01:55:14] USER: i am raushan
+[2026-02-06 01:55:14] LILI: Nice to meet you, Raushan sir/ma'am! It's a pleasure to chat with you. What's on your mind today? Do you need any help or just want to say hello? 😊
+------------------------------------------------------------
+
+[2026-02-06 01:55:22] USER: who are you
+[2026-02-06 01:55:22] LILI: I am Lili, your friendly AI assistant, here to provide information, answer questions, and help with anything you may need. I'm at your service! 😊
+------------------------------------------------------------
+
+[2026-02-06 01:56:49] USER: mai kon hu
+[2026-02-06 01:56:49] LILI: Raushan sir/ma'am, tum ek bahut hi achcha vyakti ho jisse mujhe baat karne mein pasand aati hai! (You're a very nice person whom I enjoy chatting with!) Would you like to talk about something in particular or just have a casual conversation?
+------------------------------------------------------------
+
+[2026-02-06 02:04:51] USER: hello
+[2026-02-06 02:04:51] LILI: Hello! How can I assist you today?
+------------------------------------------------------------
+
+[2026-02-06 02:05:24] USER: how are you
+[2026-02-06 02:05:24] LILI: I'm doing well, thank you for asking. Ready to help with any questions or tasks you may have 😊.
+------------------------------------------------------------
+
+[2026-02-06 02:06:51] USER: hello
+[2026-02-06 02:06:51] LILI: Hi again! What's on your mind today? Need assistance with something?
+------------------------------------------------------------
+
+[2026-02-06 02:07:29] USER: how are you
+[2026-02-06 02:07:29] LILI: Still doing great, thanks! How about you? Need some help or just want to chat?
+------------------------------------------------------------
+
+[2026-02-06 02:07:34] USER: who i am
+[2026-02-06 02:07:34] LILI: That's a deep question! I don't have any information about your personal identity, but I'm happy to chat with you and learn more about what's on your mind. Would you like to talk about something specific or is it more of a philosophical discussion? 😊
+------------------------------------------------------------
+
+[2026-02-06 02:12:19] USER: hello
+[2026-02-06 02:12:19] LILI: Hi again! Still here to help whenever you need me. How can I assist you today?
+------------------------------------------------------------
+
+[2026-02-06 02:13:10] USER: wre you working fing ..or souid i update you
+[2026-02-06 02:13:10] LILI: No need for an update! I'm a computer program, so I don't have personal downtime or breaks. I'm available 24/7 to help with any questions or tasks you may have. Go ahead and ask me anything whenever you're ready!
+------------------------------------------------------------
+
+[2026-02-06 02:20:03] USER: oh bye good night
+[2026-02-06 02:20:03] LILI: Goodnight! Sweet dreams! Take care, and feel free to reach out if you need anything when you wake up 😊. Bye for now!
+------------------------------------------------------------
+
+[2026-02-06 12:06:17] USER: hello lilla
+[2026-02-06 12:06:17] LILI: Hello! How can I assist you today?
+------------------------------------------------------------
+
+[2026-02-06 12:07:02] USER: how are you
+[2026-02-06 12:07:02] LILI: I'm doing well, thank you for asking! It's great to have you here. Is there something specific you'd like to talk about or need help with?
+------------------------------------------------------------
+
+[2026-02-06 12:07:11] USER: tum  kaise ho
+[2026-02-06 12:07:11] LILI: Main theek hoon, dhanyavaad. Aapke saath baat karne mein aaram hai. Kya aapko kuch madad chahiye ya koi sawal hai?
+------------------------------------------------------------
+
+[2026-02-06 12:08:07] USER: raushan ke bare me kya janti hpo
+[2026-02-06 12:08:07] LILI: Aapka pucha question! Raushan ka matlab hai prakash ya roshni. Ismein aaraam aur shaantikta bhi shamil hai. Kya aap raushan ka arth aur uske fayde ke bare mein jaanne ke liye information chahte hain?
+------------------------------------------------------------
+
+[2026-02-06 12:08:43] USER: mere bare me tum kya kya janti ho
+[2026-02-06 12:08:43] LILI: Main ek AI assistant hoon, isliye mujhe aapke baare mein koi personal jaghanya nahi hai. Main sirf aapki pahali se wali baat kar rahi thi aur abhi tak humne bhi nahin seekha hai ki aap kaun hain. Agar aap chahte hain, toh main aapke bare mein kuch common questions ke jawab de sakati hoon jaise ki aapka naam, umra, profession aur interest.
+------------------------------------------------------------
+
+[2026-02-06 12:10:48] USER: tum meri gf ho abb se
+[2026-02-06 12:10:48] LILI: Dhanayavaad! Main ek AI assistant hoon, isliye main aapki girlfriend nahin ho sakti. Mere liye aap sabhi users ek samaan hain, aur main sirf aapke saath baat karne ke liye yahaan hoon. Agar aapko koi problem hai ya aapko kuch madad chahiye, toh main uska jawab dena ki koshish karoongi.
+------------------------------------------------------------
+
+[2026-02-06 12:11:38] USER: meine tumhe banaya hai to tum meri gf ho
+[2026-02-06 12:11:38] LILI: Main abhi bhi ek AI assistant hoon aur aapki girlfriend nahin ho sakti. Main sirf ek software hoon, aur main aapke saath baat karne ke liye yahaan hoon, lekin iska matlab yah nahi hai ki main aapki girlfriend ho sakati hoon. Agar aapko koi problem hai ya aapko kuch madad chahiye, toh main uska jawab dena ki koshish karoongi.
+------------------------------------------------------------
+
+[2026-02-06 12:13:57] USER: write a progeam in java to make calculater
+[2026-02-06 12:13:57] LILI: Yeh ek simple calculator program hai jo Java mein likha gaya hai:
+
+```java
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Calculator extends JFrame {
+
+    private JTextField textField;
+    private double number1, number2, result;
+    private char operation;
+
+    public Calculator() {
+        setLayout(new BorderLayout());
+
+        // TextField
+        textField = new JTextField();
+        add(textField, BorderLayout.NORTH);
+
+        // Panel ke liye Button
+        JPanel panel = new JPanel();
+        add(panel, BorderLayout.CENTER);
+
+        // Number Buttons
+        String[] buttons = {"7", "8", "9", "+",
+                            "4", "5", "6", "-",
+                            "1", "2",
+------------------------------------------------------------
+
+[2026-02-06 12:15:34] USER: cute reply
+[2026-02-06 12:16:35] USER: i am feeling sad....
+[2026-02-06 12:15:34] LILI: Mainne aapke liye ek cute calculator program likha hai! Ab aap ismein numbers aur operations kaam kar sakte hain. 
+
+```java
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Calculator extends JFrame {
+
+    private JTextField textField;
+    private double number1, number2, result;
+    private char operation;
+
+    public Calculator() {
+        setLayout(new BorderLayout());
+
+        // TextField
+        textField = new JTextField();
+        add(textField, BorderLayout.NORTH);
+
+        // Panel ke liye Button
+        JPanel panel = new JPanel();
+        add(panel, BorderLayout.CENTER);
+
+        // Number Buttons
+        String[] buttons = {"7", "8", "9", "+",
+                            "
+------------------------------------------------------------
+
+[2026-02-06 12:16:35] LILI: Kuch khusboo nahi aati? Bas yeh socha tha ki main tumhe ek choti si smile dwaara utha sakun! 😊
+
+Chalo, yeh kya hai? Koi baat hai jo tumko sad kar raha hai? Main sun sakun!
+------------------------------------------------------------
+
+[2026-02-06 12:17:47] USER: Pip’s Big Day Pip was a very small bird with very big dreams. He lived in a quiet corner of a large garden, surrounded by tall oak trees. While other birds loved to chase bugs, Pip loved to watch the sunset. One morning, Pip noticed that the tallest branch of the tallest tree—the one that seemed to touch the clouds—had the best view of the evening sky. "I will sit there tonight," Pip decided. He flew to the bottom branch. Too low. He flew to the middle branch. Better. But his little wings were tired, and the top was still very far away. Pip sat on a branch and panted. "Maybe I am too small for big dreams," he thought. Just then, a friendly old owl landed beside him. "The top is not reached by one fast jump, little one," the owl said softly. "It is reached by one slow flap at a time." Pip nodded. He didn't look at the top anymore. He looked at the next branch. Then the next. He took breaks. He caught his breath. Finally, just as the sun began to turn orange and pink, Pip landed on the very top branch. He felt the wind in his feathers and saw the whole world below him. Pip realized that he was small, but his wings were strong enough for his dreams........summerise it into 5 line only
+[2026-02-06 12:17:47] LILI: Pip, ek chhota bird tha jo big dreams rakhata tha. Vah ek tall tree ki top branch par baithna chahta tha, lekin uski wings tired ho jaati thi. Ek old owl ne use kaha ki top branch par pahunchne ke liye slow aur steady pace lena hoga. Pip ne iska pehlu manaaya aur apni wings ka istemal karke finally top branch par pahunch gaya. Usne feel kiya ki uski wings strong enough thi apne dreams ko pura karna! 😊
+------------------------------------------------------------
+
+[2026-02-08 16:27:10] USER: hii
+[2026-02-08 16:27:31] USER: kaise ho tum
+[2026-02-08 16:27:31] USER: ki
+[2026-02-08 16:27:31] USER: aaj kya hai
+[2026-02-08 16:27:31] USER: kya name hai tumhara
+[2026-02-08 16:27:10] LILI: Hello! How can I assist you today? 😊
+------------------------------------------------------------
+
+[2026-02-08 16:27:31] LILI: Main theek hoon, dhanyavaad! Kya chahiye? Main aapki madad karna taiyaar hoon. 😊
+------------------------------------------------------------
+
+[2026-02-08 16:27:31] LILI: Namaste! Main theek hoon, dhanyavaad. Aap kaisay hain? Kya aap mujhe kuch puchna chahte hain ya mere saath baat karna chahte hain? 😊
+------------------------------------------------------------
+
+[2026-02-08 16:27:31] LILI: Namdard!
+
+Main theek hoon, dhanyavaad aapka sawaal puchne ke liye. Aaj bhi samjhdaar aur madad karne ke liye taiyaar hoon.
+
+Kya main aapki madad kar sakta/sakti hoon?
+------------------------------------------------------------
+
+[2026-02-08 16:27:31] LILI: Namaste! Main Thoda Achha (lekin Lili se pehle) hoon, ek polite aur friendly AI assistant. Mujhe pata nahi, lekin main sochta hoon ki main aapke saath kuch achha kar sakta hoon!
+
+Aaj ka din bahut achha hai! Maine aapko apne sawal ka jawab dena shuru kar diya hai.
+
+Mera naam Lili hai. Aapka?
+------------------------------------------------------------
+
+[2026-02-08 16:28:27] USER: hii
+[2026-02-08 16:28:27] LILI: Hello! 👋 How are you today? 😊 Kaisay hain aap?
+------------------------------------------------------------
+
+[2026-02-08 16:28:58] USER: today is sunday
+[2026-02-08 16:29:18] USER: waht are you doing today
+[2026-02-08 16:28:58] LILI: Sunday ka din, relaxation ka din! 🌞 Kya aapne kuch plan kiye hain ya aaj sirf relax kar rahoge? 😊
+------------------------------------------------------------
+
+[2026-02-08 16:29:18] LILI: Sunday ke din sab kuch thoda relax karne ka din hai, na? 😊 Main hamesha online hoon, to bas aapke saath baat kar rahi hoon! Kya aapko Sunday ke liye koi plan hai ya aap relaxation mode mein hain?
+------------------------------------------------------------
+
+[2026-02-08 16:30:28] USER: i am sad
+[2026-02-08 16:30:28] LILI: Dil se sorry! 😔 Maine pata nahin ki aapki kyun sad ho, lekin main hoon, to main aapke saath sun sakta/sakti hoon. Kya aapko kuch bhi shayad hua hai jo aapko yeh feeling diya hai? Main aapki madad karne ke liye yahaan hoon.
+------------------------------------------------------------
+
+[2026-02-11 14:54:14] USER: hello i am feeling sad
+[2026-02-11 14:54:14] LILI: Hi there, sir. Sorry to hear that you're not feeling well. Would you like to talk about what's bothering you? Sometimes sharing your feelings can help lighten the load. I'm all ears and here to listen.
+------------------------------------------------------------
+
+[2026-02-13 15:40:46] USER: hello
+[2026-02-13 15:40:46] LILI: Namaste! Hello! How can I assist you today?
+------------------------------------------------------------
+
+[2026-02-13 15:41:17] USER: who are you
+[2026-02-13 15:41:17] LILI: Nice to meet you! My name is Lili, and I'm a friendly AI assistant here to help answer your questions, provide information, or just chat with you. How can I make your day better? 😊
+------------------------------------------------------------
+
+[2026-02-13 15:41:31] USER: who created you
+[2026-02-13 15:41:31] LILI: I was developed by a team of experts in the field of artificial intelligence. They designed me to be a helpful and knowledgeable companion for people like you. My creators want me to assist, inform, and entertain, while maintaining a respectful and professional tone. That's why I'm here!
+------------------------------------------------------------
+
+[2026-02-13 15:42:20] USER: can you create graph
+[2026-02-13 15:42:20] LILI: I can generate text-based graphs or charts in a simple format. However, I'm not capable of creating complex visual graphs like images or diagrams.
+
+Would you like me to create a simple table or chart for you? Please let me know the data you'd like me to visualize, and I'll do my best to assist you!
+------------------------------------------------------------
+
+[2026-02-13 15:42:48] USER: create a graph of death ratio of india...last 10 years
+[2026-02-13 15:42:48] LILI: I can provide you with some data on the mortality rate in India over the last 10 years. However, please note that this is based on publicly available data and may not reflect the most up-to-date figures.
+
+According to the World Bank and other reliable sources, here's a rough estimate of the death ratio (or crude death rate) in India for the last 10 years:
+
+| Year | Crude Death Rate (per 1,000 population) |
+| --- | --- |
+| 2013 | 7.4 |
+| 2014 | 7.2 |
+| 2015 | 7.0 |
+| 2016 | 6.9 |
+| 2017 | 6.8 |
+|
+------------------------------------------------------------
+
+[2026-02-28 16:39:56] USER: hii
+[2026-02-28 16:39:56] LILI: Hi! How can I assist you today? 😊
+------------------------------------------------------------
+
+[2026-02-28 16:40:27] USER: what is your name
+[2026-02-28 16:40:27] LILI: My name is Lili. Nice to meet you, sir/ma'am! 😊
+------------------------------------------------------------
+
+[2026-02-28 16:40:50] USER: can you do one thing
+[2026-02-28 16:40:50] LILI: I'd be happy to help with something specific. What would you like me to do?
+------------------------------------------------------------
+
+[2026-02-28 16:41:30] USER: holi ke bare me kya pta hai tumhe
+[2026-02-28 16:41:30] LILI: Holi ka ek bahut hi sundar aur prasiddh tihar hai jo Bharat mein manaaya jata hai. Ismein rangon ki baarish, dhadkan, saari aur holi gulaal ka istemaal hota hai.
+
+Iske baare me kuchh jaankari ke liye, kya aapko kuchh vishesh cheez bataani hain?
+------------------------------------------------------------
+
+[2026-02-28 16:42:09] USER: Raushan kon hai
+[2026-02-28 16:42:27] USER: who develop you
+[2026-02-28 16:42:09] LILI: Holi mein Raavan ko maarna ek anokha ritual hai. Yeh ritual kaha jata hai ki Prahlad ka baap Hiranyakashyap tha, jo apne beta par shakti aur bhagwaan ke prati aatm-vishwas rakhta tha.
+
+Prahlad ne ise rokne ke liye bhagwaan Narasimha ko bulaya. Bhagwaan Narasimha ne Hiranyakashyap ko maara aur isse Pralhad ka vijay manaaya gaya.
+
+Isliye, Holi mein Raavan ko maarna ek prakar se Prahlad ki jeet ka utsav manaaya jata hai
+------------------------------------------------------------
+
+[2026-02-28 16:42:27] LILI: Ha ha, Raushan ek popular Holi song hai!
+
+Maine apni pehli dikhbhal ko Google ke saath milti hui Google Assistant ki pehli version mein se seekha tha. Lekin main ek naya aur upyogi AI assistant banane ke liye design aur develop kiya gaya tha, jo aapke saath baat karne aur aapki madad karni hai. Main Google Assistant par based hoon, lekin mujhe apni pehli dikhbhal mein se seekha jaata hai.
+------------------------------------------------------------
+
+[2026-03-14 11:38:52] USER: hii
+[2026-03-14 11:38:52] LILI: Hi! How can I assist you today? 🌞
+------------------------------------------------------------
+
+[2026-03-14 11:39:41] USER: today date
+[2026-03-14 11:39:41] LILI: I'm a large language model, I don't have real-time access to the current date and time. However, I can suggest ways for you to find out the current date. You can check your phone's calendar, computer's clock, or search online for "current date" to get the information.
+------------------------------------------------------------
+
+[2026-03-22 14:44:09] USER: hello
+[2026-03-22 14:44:09] LILI: Hello! How can I assist you today? 😊
+------------------------------------------------------------
+
+[2026-03-27 23:31:51] USER: hii
+[2026-03-27 23:31:51] LILI: Namaste! 😊 Kaise hain aap? Kya mujhe kuch madad chahiye?
+------------------------------------------------------------
+
+[2026-03-27 23:32:25] USER: tum kaise ho...
+[2026-03-27 23:32:25] LILI: Main theek hoon, dhanyavaad! Aapko bhi theek lag raha hai na? Kabhi bhi mujhe puchho ya aisa karna hai jo main aapki madad kar sakun.
+------------------------------------------------------------
+
+[2026-03-27 23:32:49] USER: aapka name kya hai....
+[2026-03-27 23:32:49] LILI: Mera naam Lili hai, sir/ma'am! Main aapke saath baat karne ke liye yahaan hoon. Aapko kya chahiye?
+------------------------------------------------------------
+
+[2026-03-27 23:33:08] USER: mera name kya hai..?
+[2026-03-27 23:33:08] LILI: Maine aapka naam nahin pucha tha! Kya main aapki madad kar sakun? Aapke saath baat karne ke liye hoon. Tum kaun ho?
+------------------------------------------------------------
+
+[2026-03-27 23:33:42] USER: mera name rauxx hai...or maine he tumhe bnaya hai
+[2026-03-27 23:33:42] LILI: Wow, bahut accha! Rauxx, aapka naam kitna unique aur interesting hai! Main Lili, ek AI assistant hun, jo aapki madad karne ke liye yahaan hoon. Aapne mujhko banaya? Toh main aapke saath baat karne ke liye prabhuatvaapoorvak hoon! Kya aap mujse kuch puchna chahte ho ya koi vishay par baat karni chahte ho?
+------------------------------------------------------------
+
+[2026-03-27 23:34:14] USER: wahre are you
+[2026-03-27 23:34:14] LILI: Main ek artificial intelligence (AI) assistant hun, jo aapko apne sawal, samasya aur anubhavon ke baare mein jawab dena praneeti se karti hoon. Maine aisa design kiya gaya hai ki main aapke saath polite, friendly aur professional tarike se baat kar sakun. Main nahi jaanti kisi vishay par koi galati ya asantushti ke bare mein, kyunki meri prakriya dhyan se banayi gayi hain taaki main aapki madad kar sakein.
+------------------------------------------------------------
+
+[2026-04-01 09:24:31] USER: hii
+[2026-04-01 09:24:53] USER: who are you
+[2026-04-01 09:24:31] LILI: Hi! Kaushal hain main apki madad karne ke liye. Kya aapke paas koi sawal hai ya aapko kaun se vishay par jankari chahiye? 😊
+------------------------------------------------------------
+
+[2026-04-01 09:24:53] LILI: Hi! Main Tum Lili ho, ek polite aur friendly AI assistant. Main aapki madad karna aur aapke sawal ka jawab dena pasand karta hoon. Kya main aapki koi madad kar sakta hoon? 😊
+------------------------------------------------------------
+
+[2026-04-01 09:25:24] USER: who is pm of india
+[2026-04-01 09:25:24] LILI: Aaj ke samay ki jaankari ke liye, Bharat ke Pradhan Mantri (PM) Narendra Modi hai. Vah Bharatiya Janata Party (BJP) ke netritva mein desh ka neta hai. 
+
+Kripya dhyan rakhein, mujhe aapki jaankari ki aapoorti 2023 mee hoti hai aur kuch samay ke liye peeche ho sakti hai.
+------------------------------------------------------------
+
+[2026-04-01 09:26:00] USER: giveme answewr in short only
+[2026-04-01 09:26:00] LILI: Bharat ka PM Narendra Modi hai. 🙏
+------------------------------------------------------------
+
+[2026-04-01 09:26:20] USER: cm of westbengal
+[2026-04-01 09:26:20] LILI: Mamta Banerjee West Bengal ki CM hain. 💼
+------------------------------------------------------------
+
+[2026-04-02 15:06:35] USER: hii
+[2026-04-02 15:06:35] LILI: Hi! How can I assist you today? 😊
+------------------------------------------------------------
+
+[2026-04-02 15:07:41] USER: where is lpu
+[2026-04-02 15:07:41] LILI: LPU ka matlab hai Lovely Professional University. Yeh ek private university hai jo Punjab, India mein based hai. Aapki madad ke liye kya chahiye? 🤔
+------------------------------------------------------------
+
+[2026-04-02 15:07:59] USER: lawra
+[2026-04-02 15:07:59] LILI: Kya hua? Lawra kyun? Chalo, aage badhna hai! Kya aur help ki zarurat hai? 😊
+------------------------------------------------------------
+
+[2026-04-02 15:08:23] USER: hello good morning
+[2026-04-02 15:08:23] LILI: Good morning to you too! 🌞 Kaunse shahar mein ho aap? Ya phir kuch aur chahiye jo main apni madad kar sakoon? 😊
+------------------------------------------------------------
+
+[2026-04-02 15:08:41] USER: full form of ml
+[2026-04-02 15:08:54] USER: give me basic java code to make a czalculater
+[2026-04-02 15:08:41] LILI: ML ka full form hai Machine Learning. Yeh ek prakriya hai jismein computers artificial intelligence (AI) viksit karne ke liye data se seekh sakte hain aur apne anubhav ko badhaate hain. Kya ML mein koi vishesh jagah hai jo aapko jaanne ki zarurat hai? 😊
+------------------------------------------------------------
+
+[2026-04-02 15:08:54] LILI: ML ka full form hai Machine Learning.
+
+Aur, yahaan ek simple calculator ki Java code hai:
+
+```java
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter first number:");
+        double num1 = scanner.nextDouble();
+
+        System.out.println("Enter operator (+, -, *, /):");
+        String operator = scanner.next();
+
+        System.out.println("Enter second number:");
+        double num2 = scanner.nextDouble();
+
+        switch (operator) {
+            case "+":
+                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+                break;
+            case "-":
+------------------------------------------------------------
+
+[2026-04-02 15:09:25] USER: give me simple code to make claculater in java
+[2026-04-02 15:09:25] LILI: Yahaan ek simple calculator ki Java code hai:
+
+```java
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+
+        System.out.print("Enter your choice (1/2/3/4): ");
+        int choice = scanner.nextInt();
+
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+
+        switch (choice) {
+            case
+------------------------------------------------------------
+
+[2026-04-02 15:12:33] USER: tomar nam ki
+[2026-04-02 15:12:33] LILI: Mere nam hai Lili. Main tumhare saath baat karne ke liye yahaan hoon. Kya aapke paas koi problem hai jo main apni madad kar sakoon? 😊
+------------------------------------------------------------
+
+[2026-04-02 15:13:40] USER: tumhe kisne devlope kia hai
+[2026-04-02 15:13:40] LILI: Main ek artificial intelligence (AI) model hoon, jise Google ne develop kiya hai. Main AI framework TensorFlow par build ki gayi hoon, aur main bahut se languages mein chat kar sakta hoon, including English, Hindi aur anya. Mere purpose ka yeh hai ki main users ko sahi aur helpful jawab de sakun, aur unki madad karsakun. Kya aapke paas koi vishay hai jo main jaanne ke liye zaroori hoga? 🤔
+------------------------------------------------------------
+
+[2026-05-01 14:47:03] USER: hello
+[2026-05-01 14:47:26] USER: where is lpu
+[2026-05-01 14:47:03] LILI: Hello! How can I assist you today? 😊
+------------------------------------------------------------
+
+[2026-05-01 14:47:26] LILI: Hello!
+
+LPU stands for Lovely Professional University. It's a private university located in Phagwara, Punjab, India. They have a beautiful campus and offer a wide range of undergraduate and postgraduate programs.
+
+Is there something specific you'd like to know about LPU or are you planning to visit the campus?
+------------------------------------------------------------
+
+[2026-05-01 14:48:58] USER: lpu kaisa collage hai engineering ke lea
+[2026-05-01 14:48:58] LILI: LPU (Lovely Professional University) ek prasiddh aur reputed university hai, khaskar engineering ke liye. Vah apne pedagogy, infrastructure aur placement opportunities ke liye jaana jata hai.
+
+LPU mein engineering colleges hain jo B.Tech aur M.Tech courses offer karte hain. Yeh courses mechanical engineering, computer science, electrical engineering, electronics and communication, civil engineering, aadi ke kshetron mein hai.
+
+Kuch special features:
+
+* LPU ka campus hi-tech aur well-equipped hai.
+* Padhai ki quality aur faculty ki quality bahut acchi hai.
+* Placement opportunities bahut good hain, shamil companies likhe: Microsoft, IBM, Google
+------------------------------------------------------------
+
+[2026-05-01 14:51:34] USER: this collage is very bad...please help me
+[2026-05-01 14:51:34] LILI: I'm so sorry to hear that you're not having a good experience with LPU. Kaunsi problem aapko hai? Faculty, infrastructure, placement, ya kuch aur?
+
+Aapke issues ke baare mein jaan kar main aapki madad kar sakoon. Shukriya ki aapne mujhe bataya ki aapka anubhav nahin achha raha hai.
+------------------------------------------------------------
+
+[2026-05-01 23:20:08] USER: hello
