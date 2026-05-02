@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ᄂIᄂI 💖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --bg-gradient: linear-gradient(135deg, #ffebee, #fff3e0, #e8f5e9);
+            --user-bubble: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            --bot-bubble: linear-gradient(135deg, #fce4ec, #f8bbd0);
+            --header-bg: linear-gradient(90deg, #f48fb1, #f06292);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            background-size: 300% 300%;
+            animation: gradientFlow 25s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow: hidden;
+            transition: background 1.8s ease;
+            margin: 0;
+        }
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        body.romantic { --bg-gradient: linear-gradient(135deg, #ffebee, #ffcccb, #ffcdd2, #f8bbd0, #f48fb1); }
+        body.happy { --bg-gradient: linear-gradient(135deg, #fffde7, #fff9c4, #fff59d, #fff176, #ffee58); }
+        body.sad { --bg-gradient: linear-gradient(135deg, #e3f2fd, #bbdefb, #90caf9, #64b5f6, #42a5f5); }
+        body.focus { --bg-gradient: linear-gradient(135deg, #e8f5e9, #c8e6c9, #a5d6a7, #81c784); }
+        body.serious { --bg-gradient: linear-gradient(135deg, #eceff1, #cfd8dc, #b0bec5, #90a4ae); }
+        body.greeting { --bg-gradient: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1); }
+        body.fun { --bg-gradient: linear-gradient(135deg, #f3e5f5, #e1bee7, #ce93d8, #ba68c8); }
+        body.flirty { --bg-gradient: linear-gradient(135deg, #fce4ec, #f8bbd0, #f48fb1, #f06292); }
+        body.surprised { --bg-gradient: linear-gradient(135deg, #fff3e0, #ffe0b2, #ffcc80, #ffb74d); }
+        body.angry { --bg-gradient: linear-gradient(135deg, #ffebee, #ffcdd2, #ef9a9a, #e57373); }
+        body.calm { --bg-gradient: linear-gradient(135deg, #e8eaf6, #c5cae9, #9fa8da, #7986cb); }
+        body.sleepy { --bg-gradient: linear-gradient(135deg, #f3e5f5, #e1bee7, #d1c4e9, #b39ddb); }
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+            transition: opacity 1.8s ease;
+        }
+        .particle {
+            position: absolute;
+            font-size: 22px;
+            opacity: 0.55;
+            pointer-events: none;
+            animation: float 18s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-30vh) rotate(720deg); opacity: 0; }
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 420px;
+            height: 85vh;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 1.2s ease;
+        }
+        .chat-header {
+            background: var(--header-bg);
+            color: white;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(255, 95, 143, 0.4);
+            transition: background 1.8s ease;
+        }
+        .chat-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .chat-header img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 3px solid white;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+        }
+        .clear-btn {
+            background: rgba(255,255,255,0.25);
+            border: none;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .clear-btn:hover {
+            background: rgba(255,255,255,0.4);
+        }
+        .chat-box {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: background 1.8s ease;
+        }
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 22px;
+            font-size: 15px;
+            line-height: 1.4;
+            word-wrap: break-word;
+            animation: fadeIn 0.4s ease;
+            transition: background 1.8s ease;
+        }
+        .user {
+            background: var(--user-bubble);
+            align-self: flex-end;
+            border-bottom-right-radius: 6px;
+            color: #333;
+        }
+        .bot {
+            background: var(--bot-bubble);
+            align-self: flex-start;
+            border-bottom-left-radius: 6px;
+            color: #333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            align-self: flex-start;
+            padding: 8px 12px;
+            background: rgba(255, 225, 235, 0.5);
+            border-radius: 22px;
+            max-width: 80%;
+            transition: background 1.2s ease;
+        }
+        .typing-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ff5f8f;
+            animation: pulse 1.5s infinite;
+        }
+        .dots {
+            display: flex;
+            gap: 6px;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #ff5f8f;
+            border-radius: 50%;
+            animation: bounce 1.2s infinite;
+        }
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.12); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .input-area {
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 1.8s ease;
+        }
+        input {
+            flex: 1;
+            padding: 14px 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(30, 30, 50, 0.85);
+            color: #ffffff;
+            font-size: 15px;
+            outline: none;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: background 1.8s ease;
+        }
+        input::placeholder {
+            color: rgba(220, 220, 255, 0.75);
+        }
+        button {
+            padding: 14px 22px;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ff5f8f, #ff8cab);
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 95, 143, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-header-left">
+                <img src="/frontend/avatar.png" alt="Lili 💖">
+                ᄂIᄂI 💖
+            </div>
+            <button class="clear-btn" onclick="clearChat()">Clear Chat</button>
+        </div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type a message..." autocomplete="off" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // ==================== GLOBAL VARIABLES ====================
+        let chatHistory = [];
+
+        const input = document.getElementById("userInput");
+        const chatBox = document.getElementById("chatBox");
+        const particlesContainer = document.getElementById("particles");
+
+        // ==================== LOAD CHAT HISTORY ====================
+        document.addEventListener("DOMContentLoaded", () => {
+            const saved = localStorage.getItem("liliChatHistory");
+            if (saved) {
+                chatHistory = JSON.parse(saved);
+                chatHistory.forEach(msg => {
+                    addMessage(msg.text, msg.type);
+                });
+            }
+            input.focus();
+        });
+
+        // ==================== SEND MESSAGE WITH STREAMING ====================
+        async function sendMessage() {
+            const message = input.value.trim();
+            if (!message) return;
+
+            addMessage(message, "user");
+            saveToHistory(message, "user");
+
+            input.value = "";
+            input.focus();
+
+            // Typing indicator
+            const typingDiv = document.createElement("div");
+            typingDiv.className = "typing-indicator";
+            typingDiv.id = "current-typing";
+            typingDiv.innerHTML = `
+                <img src="/frontend/avatar.png" class="typing-avatar" alt="Lili">
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            `;
+            chatBox.appendChild(typingDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            try {
+                const response = await fetch("http://127.0.0.1:8000/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message })
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+
+                let fullReply = "";
+                let firstChunkReceived = false;
+                let botDiv = null;
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    fullReply += chunk;
+
+                    // Pehla chunk aate hi typing hatao aur bubble banao
+                    if (!firstChunkReceived) {
+                        firstChunkReceived = true;
+                        if (typingDiv && typingDiv.parentNode) {
+                            chatBox.removeChild(typingDiv);
+                        }
+                        botDiv = document.createElement("div");
+                        botDiv.className = "message bot";
+                        botDiv.textContent = fullReply;
+                        chatBox.appendChild(botDiv);
+                    } else if (botDiv) {
+                        botDiv.textContent = fullReply;
+                    }
+
+                    updateMoodFromPartial(fullReply);
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }
+
+                // Final save aur mood confirm
+                if (botDiv) {
+                    saveToHistory(fullReply.trim(), "bot");
+
+                    let mood = "normal";
+                    const lowerText = fullReply.toLowerCase();
+                    if (/pyar|love|jaan|sweetheart|💕|💖|lover|darling|pyaar/i.test(lowerText)) mood = "romantic";
+                    else if (/khush|happy|haha|joke|😜|😂|fun|excited|mast/i.test(lowerText)) mood = "happy";
+                    else if (/sad|dukhi|sorry|💔|hug|comfort|rona|miss/i.test(lowerText)) mood = "sad";
+                    else if (/focus|serious|kaam|study|padhai|dhyan/i.test(lowerText)) mood = "focus";
+                    else if (/hii|hello|hi|hey|namaste|sup/i.test(lowerText)) mood = "greeting";
+                    else if (/haha|lol|funny|maza|joke/i.test(lowerText)) mood = "fun";
+                    else if (/flirt|cute|hot|sexy|wink|😏/i.test(lowerText)) mood = "flirty";
+                    else if (/shock|wow|omgg|kya|surprise/i.test(lowerText)) mood = "surprised";
+                    else if (/gussa|angry|irritate|fuck|shit/i.test(lowerText)) mood = "angry";
+                    else if (/calm|relax|peace|shant/i.test(lowerText)) mood = "calm";
+                    else if (/sleepy|thak|neend|tired|boring/i.test(lowerText)) mood = "sleepy";
+
+                    document.body.className = mood;
+                    updateParticles(mood);
+                }
+
+            } catch (err) {
+                console.error("Streaming error:", err);
+                if (typingDiv && typingDiv.parentNode) {
+                    chatBox.removeChild(typingDiv);
+                }
+                addMessage("Oopsie... connection glitch ho gaya 💔", "bot");
+                saveToHistory("Oopsie... connection glitch ho gaya 💔", "bot");
+            }
+        }
+
+        // ==================== PARTIAL MOOD UPDATE ====================
+        function updateMoodFromPartial(text) {
+            let mood = "normal";
+            const lower = text.toLowerCase();
+            if (/pyar|love|jaan|sweetheart|💕|💖|lover|darling|pyaar/i.test(lower)) mood = "romantic";
+            else if (/khush|happy|haha|joke|😜|😂|fun|excited|mast/i.test(lower)) mood = "happy";
+            else if (/sad|dukhi|sorry|💔|hug|comfort|rona|miss/i.test(lower)) mood = "sad";
+            else if (/focus|serious|kaam|study|padhai|dhyan/i.test(lower)) mood = "focus";
+            else if (/hii|hello|hi|hey|namaste|sup/i.test(lower)) mood = "greeting";
+            else if (/haha|lol|funny|maza|joke/i.test(lower)) mood = "fun";
+            else if (/flirt|cute|hot|sexy|wink|😏/i.test(lower)) mood = "flirty";
+            else if (/shock|wow|omgg|kya|surprise/i.test(lower)) mood = "surprised";
+            else if (/gussa|angry|irritate|fuck|shit/i.test(lower)) mood = "angry";
+            else if (/calm|relax|peace|shant/i.test(lower)) mood = "calm";
+            else if (/sleepy|thak|neend|tired|boring/i.test(lower)) mood = "sleepy";
+
+            document.body.className = mood;
+            updateParticles(mood);
+        }
+
+        // ==================== ADD MESSAGE (sirf user aur error ke liye) ====================
+        function addMessage(text, type) {
+            const div = document.createElement("div");
+            div.className = `message ${type}`;
+            div.textContent = text;
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        // ==================== SAVE HISTORY & CLEAR ====================
+        function saveToHistory(text, type) {
+            chatHistory.push({ text, type });
+            localStorage.setItem("liliChatHistory", JSON.stringify(chatHistory));
+        }
+
+        function clearChat() {
+            if (confirm("Puri chat delete kar doon?")) {
+                chatHistory = [];
+                localStorage.removeItem("liliChatHistory");
+                chatBox.innerHTML = "";
+                document.body.className = "";
+                updateParticles("normal");
+            }
+        }
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // ==================== PARTICLES & MOOD EMOJIS ====================
+        const moodEmojis = {
+            romantic: ["💖", "❤️", "💕", "💗", "💘", "💞", "💓", "💝", "💟", "🥰", "😘", "😍", "💋", "🌹", "🌸"],
+            happy: ["😄", "😊", "😁", "🥳", "🎉", "✨", "🌟", "😆", "🤩", "🔥", "🎈", "🎊", "😃", "🥰"],
+            sad: ["🥺", "😢", "💔", "😔", "😞", "😭", "🤗", "🫂", "☹️", "🌧️", "☁️", "💙"],
+            focus: ["📚", "💻", "🎯", "🧠", "📝", "⏳", "🔍", "💪", "🧩", "📊", "🚀", "🔥"],
+            serious: ["🧐", "🤔", "📈", "⚖️", "🔒", "📋", "👔", "💼", "🧑‍💼", "📉", "🛡️"],
+            greeting: ["👋", "🖐️", "🙌", "😊", "🌞", "🙏", "😄", "✋", "🤚", "🌅", "☀️"],
+            fun: ["😈", "🤪", "😂", "🎲", "🎮", "🕹️", "🤯", "🥳", "😜", "🎁", "🎈"],
+            flirty: ["😏", "😉", "😘", "🥰", "😍", "💋", "😚", "😋", "🥵", "😜", "😘"],
+            surprised: ["😲", "😱", "🤯", "😮", "😯", "😳", "🙀", "😵", "🤩", "😲"],
+            angry: ["😠", "😡", "🤬", "💢", "😤", "👿", "🔥", "💥", "🗯️", "😣"],
+            calm: ["😌", "🧘", "🌿", "🍃", "☮️", "🕊️", "🌊", "🌙", "✨", "🌼"],
+            sleepy: ["😴", "💤", "🥱", "🛌", "🌙", "🌜", "😪", "🧸", "☕", "😪"]
+        };
+        const allEmojis = Object.values(moodEmojis).flat();
+
+        function createParticle(mood = "normal") {
+            const particle = document.createElement("div");
+            particle.className = "particle";
+            let emojiList = moodEmojis[mood] || allEmojis;
+            const randomEmoji = emojiList[Math.floor(Math.random() * emojiList.length)];
+            particle.innerText = randomEmoji;
+            particle.style.left = Math.random() * 100 + "vw";
+            particle.style.animationDuration = (Math.random() * 10 + 12) + "s";
+            particle.style.fontSize = (Math.random() * 18 + 14) + "px";
+            particle.style.opacity = Math.random() * 0.3 + 0.4;
+            particlesContainer.appendChild(particle);
+            setTimeout(() => particle.remove(), 30000);
+        }
+
+        function updateParticles(mood) {
+            let intervalTime = 2800;
+            if (["romantic", "flirty", "happy", "fun"].includes(mood)) intervalTime = 700;
+            else if (["greeting", "surprised"].includes(mood)) intervalTime = 1200;
+            else if (["sad", "sleepy", "calm", "focus", "serious"].includes(mood)) intervalTime = 3500;
+            else intervalTime = 2200;
+            clearInterval(window.particleInterval);
+            window.particleInterval = setInterval(() => createParticle(mood), intervalTime);
+        }
+
+        updateParticles("normal");
+    </script>
+</body>
+</html>
